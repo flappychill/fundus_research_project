@@ -1,0 +1,17 @@
+__pycache__/
+.ipynb_checkpoints/
+*.pt
+*.pth
+*.npy
+*.npz
+*.csv
+*.png
+*.jpg
+*.jpeg
+*.webp
+.env
+models/checkpoints/*
+!models/checkpoints/.gitkeep
+data/*
+!data/.gitkeep
+outputs/

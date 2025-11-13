@@ -1,0 +1,18 @@
+project_name: fundus_vision
+seed_list: [42, 1337, 2024]
+root: ./data/eye
+img_size: 224
+batch_size: 32
+num_workers: 2
+epochs: 12
+lr: 0.0002
+weight_decay: 0.0001
+backbone: convnext_base
+head: rpattn
+pooling: gem
+feat_ch: 256
+use_se: true
+dilations: [2, 3]
+num_heads: 4
+attn_pool_stride: 2
+save_dir: ./outputs
