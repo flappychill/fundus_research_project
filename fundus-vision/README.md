@@ -108,4 +108,4 @@ python scripts/export_torchscript.py --ckpt models/checkpoints/best.pt --classes
 
 ## License
 
-MIT
+Apache-2.0 license
