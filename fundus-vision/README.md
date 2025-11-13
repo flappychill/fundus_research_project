@@ -106,6 +106,25 @@ python scripts/export_torchscript.py --ckpt models/checkpoints/best.pt --classes
 - Use `outputs/eda` to understand class balance and image sizes.
 - The web app returns top-5 predictions with scores.
 
+## Weights
+
+Pretrained checkpoints nằm ở mục **Assets** của GitHub Releases.
+
+| Head (classifier) | Filename | Download |
+|---|---|---|
+| Reverse-Pyramid + Self-Attention | `RPAttn_GeM_SE.pt` | [`download`](https://github.com/flappychill/fundus_research_project/releases/download/v0.1.0/RPAttn_GeM_SE.pt) |
+| Reverse-Pyramid (no attention)   | `RevPyr_GeM_SE.pt` | [`download`](https://github.com/flappychill/fundus_research_project/releases/download/v0.1.0/RevPyr_GeM_SE.pt) |
+| Strong head (SE + GeM)           | `CNX_Strong_GeM_SE.pt` | [`download`](https://github.com/flappychill/fundus_research_project/releases/download/v0.1.0/CNX_Strong_GeM_SE.pt) |
+| FPN head                         | `CNX_FPN_Gem_SE.pt` | [`download`](https://github.com/flappychill/fundus_research_project/releases/download/v0.1.0/CNX_FPN_Gem_SE.pt) |
+| Class list                       | `classes.json` | [`download`](https://github.com/flappychill/fundus_research_project/releases/download/v0.1.0/classes.json) |
+
+### Tải nhanh
+**PowerShell (Windows):**
+```powershell
+New-Item -ItemType Directory -Force models/checkpoints | Out-Null
+iwr "https://github.com/flappychill/fundus_research_project/releases/download/v0.1.0/RPAttn_GeM_SE.pt" -OutFile "models/checkpoints/RPAttn_GeM_SE.pt"
+iwr "https://github.com/flappychill/fundus_research_project/releases/download/v0.1.0/classes.json" -OutFile "models/checkpoints/classes.json"
+
 ## License
 
 Apache-2.0 license
